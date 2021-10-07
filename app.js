@@ -10,6 +10,7 @@ var noticiaRouter = require('./routes/noticia');
 var rerunRouter = require('./routes/rerun');
 
 
+
 var app = express();
 
 // view engine setup
@@ -25,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/noticia', noticiaRouter);
-app.use('/rerun', rerunRouter);
+app.use('/noticia/rerun', rerunRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
